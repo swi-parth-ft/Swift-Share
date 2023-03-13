@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SignUpView.swift
 //  Swift Share
 //
 //  Created by Parth Antala on 2023-03-13.
@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignUpView: View {
     
+    @State private var name = ""
+    @State private var phoneNumber = ""
     @State private var email = ""
     @State private var password = ""
     
@@ -16,15 +18,27 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    
-                    Text("Welcome to Swift Share")
-                        .font(.title)
-                        .foregroundColor(.blue)
-                    Text("file sharing, reimagined")
-                        .italic()
+                    Text("Enter your details to sign up and experience the new way of sharing files!")
+                        .font(.headline)
                         .foregroundColor(.orange)
                     
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "person.fill")
+                                .font(.system(size: 64))
+                                .padding()
+                        }
+                        
+                        TextField("Name", text: $name)
+                            .padding(12)
+                            .background(Color.white)
+                            .cornerRadius(9)
+                    }
                     Group {
+                        TextField("Phone", text: $phoneNumber)
+                            .keyboardType(.numberPad)
                         TextField("Email", text: $email)
                         SecureField("Password", text: $password)
                     }
@@ -37,7 +51,7 @@ struct ContentView: View {
                     } label: {
                         HStack {
                             Spacer()
-                            Text("Sign In")
+                            Text("Sign Up")
                                 .foregroundColor(.white)
                                 .padding(.vertical, 18)
                                 .font(.system(size: 14, weight: .semibold))
@@ -48,30 +62,18 @@ struct ContentView: View {
                     .padding(20)
                     Spacer()
                     
-                    HStack {
-                        Text("New User?")
-                        NavigationLink {
-                            SignUpView()
-                        } label: {
-                            Text("Sign Up")
-                                .foregroundColor(.orange)
-                        }
-                    }
                 }
                 .padding(33)
             }
-            .navigationTitle("Sign In")
+            .navigationTitle("Sign Up")
             .background(Color(.init(white: 0, alpha: 0.05))
             .ignoresSafeArea())
         }
-      //  .navigationViewStyle(StackNavigationViewStyle())
     }
-    
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignUpView()
     }
 }

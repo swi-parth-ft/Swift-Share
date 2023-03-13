@@ -11,6 +11,7 @@
 		076CDAF229BF84EF004DFD2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CDAF129BF84EF004DFD2B /* ContentView.swift */; };
 		076CDAF429BF84F0004DFD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076CDAF329BF84F0004DFD2B /* Assets.xcassets */; };
 		076CDAF729BF84F0004DFD2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076CDAF629BF84F0004DFD2B /* Preview Assets.xcassets */; };
+		076CDAFE29BFC51D004DFD2B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CDAFD29BFC51D004DFD2B /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		076CDAF129BF84EF004DFD2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		076CDAF329BF84F0004DFD2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076CDAF629BF84F0004DFD2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		076CDAFD29BFC51D004DFD2B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				076CDAEF29BF84EF004DFD2B /* Swift_ShareApp.swift */,
+				076CDAFD29BFC51D004DFD2B /* SignUpView.swift */,
 				076CDAF129BF84EF004DFD2B /* ContentView.swift */,
 				076CDAF329BF84F0004DFD2B /* Assets.xcassets */,
 				076CDAF529BF84F0004DFD2B /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076CDAF229BF84EF004DFD2B /* ContentView.swift in Sources */,
+				076CDAFE29BFC51D004DFD2B /* SignUpView.swift in Sources */,
 				076CDAF029BF84EF004DFD2B /* Swift_ShareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
