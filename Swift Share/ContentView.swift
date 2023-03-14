@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     
@@ -33,7 +34,7 @@ struct ContentView: View {
                     .cornerRadius(9)
                     
                     Button {
-                        
+                        loginUser()
                     } label: {
                         HStack {
                             Spacer()
@@ -65,6 +66,16 @@ struct ContentView: View {
             .ignoresSafeArea())
         }
       //  .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    private func loginUser() {
+        FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, err in
+                   if let err = err {
+                       print("Failed to login user:", err)
+                       return
+                   }
+                   print("Successfully logged in as user: \(result?.user.uid ?? "")")
+               }
     }
     
 }
