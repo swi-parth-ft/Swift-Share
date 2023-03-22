@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Swift_ShareApp: App {
+    let loginSignup = LoginSignup()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainMessagesView()
+                .environmentObject(loginSignup)
         }
     }
 }
