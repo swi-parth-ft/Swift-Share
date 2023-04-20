@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Swift_ShareApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     let loginSignup = LoginSignup()
     var body: some Scene {
         WindowGroup {
